@@ -9,12 +9,12 @@
             <div class = "content">
                 <div class = "navbar">
                     <img src="pgs_logo.png" class = "navlogo">
-                    <a class = "navbar_text" href = "login.html">login</a>
-                    <a class = "navbar_text" href = "register.html">register</a>
-                    <a class = "navbar_text" href = "index.html">play</a>
-                    <a class = "navbar_text" href = "mygames.html">mygames</a>
-                    <a class = "navbar_text" href = "profile.html">profile</a>
-                    <a class = "navbar_text" href = "testgame.html">testgame</a>
+                    <a class = "navbar_text" href = "login.php">login</a>
+                    <a class = "navbar_text" href = "register.php">register</a>
+                    <a class = "navbar_text" href = "index.php">play</a>
+                    <a class = "navbar_text" href = "mygames.php">mygames</a>
+                    <a class = "navbar_text" href = "profile.php">profile</a>
+                    <a class = "navbar_text" href = "testgame.php">testgame</a>
                 </div>
                 <div id = "create_game_div">
                     <button type = "button" id = "create_game_button">Create Game</button>
