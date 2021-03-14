@@ -28,7 +28,7 @@
                 <?php
                             require_once 'Dao.php';
                             $dao = new Dao();
-                            $tables = $dao->createUsersTable();
+                            $tables = $dao->addUser();
                             foreach($tables as $table) {
                                 echo print_r($table, 1);
                             }

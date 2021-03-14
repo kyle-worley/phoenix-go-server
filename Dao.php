@@ -40,6 +40,18 @@ class Dao {
         }
         return $rows;
     }
+
+    public function addUser() {
+        $connection = $this->getConnection();
+        try {
+            $rows = $connection->query("INSERT INTO users (username, password) values ('Ronin', 'password1');", PDO::FETCH_ASSOC);
+        }
+        catch (Exception $e){
+            echo print_r($e,1);
+            exit;
+        }
+        return $rows;
+    }
 }
     
 ?>
