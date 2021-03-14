@@ -25,28 +25,14 @@
                     <h6 id = "register_link">Already have an account? <a href = "login.html">Login</a></h6>
                     <input type="submit" value="Create Account" class = "center">
                 </form>
-                <table id="users">
-                    <thead>
-                        <tr>
-                            <th>user_id</th>
-                            <th>username</th>
-                            <th>password</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
+                <?php
                             require_once 'Dao.php';
                             $dao = new Dao();
-                            $users = $dao->getUsers();
-                            foreach($users as $user) {
-                                echo
-                                    "<tr><td>" . $user['user_id'] . "</td>" .
-                                    "<td>" . htmlspecialchars($user['username']) . "</td>" . 
-                                    "<td>" . htmlspecialchars($user['password']) . "</td></tr>";
+                            $tables = $dao->createUsersTable();
+                            foreach($tables as $table) {
+                                echo print_r($table, 1);
                             }
                         ?>
-                    </tbody>
-                </table>
             </div>
             <footer class = "footer">
                 <p>&copy; Don't actually have a copyright.     |     contact: kyleworley@u.boisestate.edu</p>

@@ -1,9 +1,9 @@
 <?php
     
 class Dao {
-    public $dsn = 'mysql:dbname=phoenixgoserver;host=127.0.0.1;port=3306';
-    public $user = "root";
-    public $password = "Shinobi,2";
+    public $dsn = 'mysql:dbname=heroku_1bc1ee89f9c7816;host=us-cdbr-east-03.cleardb.com;port=3306';
+    public $user = "bcdd944f9d361a";
+    public $password = "5f9a5f96";
 
     public function getConnection() {
         try {
@@ -23,6 +23,19 @@ class Dao {
         }
         catch (Exception $e){
             echo print_r($e, 1);
+            exit;
+        }
+        return $rows;
+    }
+
+    public function createUsersTable() {
+        $connection = $this->getConnection();
+        try {
+            $rows = $connection->query("CREATE TABLE users (user_id INT AUTO_INCREMENT 
+            PRIMARY KEY, username VARCHAR(16) NOT NULL, password VARCHAR(32) NOT NULL);", PDO::FETCH_ASSOC);
+        }
+        catch (Exception $e){
+            echo print_r($e,1);
             exit;
         }
         return $rows;
