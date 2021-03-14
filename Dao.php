@@ -1,7 +1,7 @@
 <?php
     
 class Dao {
-    public $dsn = 'mysql:dbname=phoenixgoserver;host=127.0.0.1;port=3333';
+    public $dsn = 'mysql:dbname=phoenixgoserver;host=localhost;port=80';
     public $user = "root";
     public $password = "Shinobi,2";
 
