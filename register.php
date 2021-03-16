@@ -18,7 +18,7 @@
                 </div>
                 <img src="pgs_logo.png" height = 400px width = 400px class = "center">
                 <div class = "title"><strong>P</strong>hoenix <strong>G</strong>o <strong>S</strong>erver</div>
-                <form>
+                <form method = "post">
                     <input type="text" id="create_username" name="create_username" class = "text_input" placeholder = "Create Username">
                     <input type="password" id="create_password" name="create_password" class = "text_input" placeholder = "Create Password">
                     <input type="password" id="retype_password" name="retype_password" class = "text_input" placeholder = "Re-type Password">
@@ -32,6 +32,7 @@
                             foreach($tables as $table) {
                                 echo print_r($table, 1);
                             }
+                            echo "<pre>" . print_r($_POST,1) . "</pre>";
                         ?>
             </div>
             <footer class = "footer">
