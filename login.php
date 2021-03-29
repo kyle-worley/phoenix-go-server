@@ -18,7 +18,7 @@
                 </div>
                 <img src="pgs_logo.png" height = 400px width = 400px class = "center">
                 <div class = "title"><strong>P</strong>hoenix <strong>G</strong>o <strong>S</strong>erver</div>
-                <form action = "login_handler.php">
+                <form method = "post" action = "login_handler.php">
                     <input type="text" id="username" name="username" class = "text_input" placeholder = "Username">
                     <input type="password" id="password" name="password" class = "text_input" placeholder = "Password">
                     <h6 id = "register_link">Don't have an account yet? <a href = "register.html">Create an account</a></h6>
