@@ -22,10 +22,10 @@
         $errors[] = "Invalid username: username is already in use."
     }
 
-    if(strlen(password) < 8) {
+    if(strlen($password) < 8) {
         $errors[] = "Invalid password: must be 8 or more characters."
     }
-    if(strlen(password) > 32) {
+    if(strlen($password) > 32) {
         $errors[] = "Invalid password: must be 32 or fewer characters."
     }
 
