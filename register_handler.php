@@ -15,7 +15,7 @@
     echo "1";
     $username_exists = false;
     foreach($users as $user) {
-        if(strcomp($user['username'], $username) ==0) {
+        if(strcmp($user['username'], $username) ==0) {
             $username_exists = true;
         }
     }
