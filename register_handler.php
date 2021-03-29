@@ -11,8 +11,8 @@
     }
     require_once 'Dao.php';
     $dao = new Dao();
-    echo "1";
     $users = $dao->getUsers();
+    echo "1";
     $username_exists = false;
     foreach($users as $user) {
         if(strcomp($user['username'], $username) ==0) {
