@@ -44,8 +44,8 @@ class Dao {
     public function addUser($username, $password) {
         $connection = $this->getConnection();
         try {
-            $query = "INSERT INTO users (username, password) values (:username, :password);"
-            $q = $conn->prepare($query);
+            $query = "INSERT INTO users (username, password) values (:username, :password);";
+            $q = $connection->prepare($query);
             $q->bindParam(":username",$username);
             $q->bindParam(":password",$password);
             $q->execute();
