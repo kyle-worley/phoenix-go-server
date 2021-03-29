@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
@@ -18,7 +21,7 @@
                 </div>
                 <img src="pgs_logo.png" height = 400px width = 400px class = "center">
                 <div class = "title"><strong>P</strong>hoenix <strong>G</strong>o <strong>S</strong>erver</div>
-                <form method = "post">
+                <form method = "post" action = "register_handler.php">
                     <input type="text" id="create_username" name="create_username" class = "text_input" placeholder = "Create Username">
                     <input type="password" id="create_password" name="create_password" class = "text_input" placeholder = "Create Password">
                     <input type="password" id="retype_password" name="retype_password" class = "text_input" placeholder = "Re-type Password">
@@ -28,9 +31,15 @@
                 <?php
                             require_once 'Dao.php';
                             $dao = new Dao();
-                            $tables = $dao->getUsers();
-                            foreach($tables as $table) {
-                                echo print_r($table, 1);
+                            $users = $dao->getUsers();
+                            if(isset($_SESSION['errors'])) {
+                                foreach($_SESSION['errors'] as $error) {
+                                    echo "<div class = 'error_message'>{$error}</div>";
+                                }
+                                unset($_SESSION['errors']);
+                            }
+                            foreach($users as $user) {
+                                echo print_r($user, 1);
                             }
                             echo "<pre>" . print_r($_POST,1) . "</pre>";
                         ?>

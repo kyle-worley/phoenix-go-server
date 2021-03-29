@@ -1,3 +1,6 @@
+<?php>
+    session_start();
+?>
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
@@ -16,6 +19,11 @@
                     <a class = "navbar_text" href = "profile.php">profile</a>
                     <a class = "navbar_text" href = "testgame.php">testgame</a>
                 </div>
+                <?php
+                if(isset($_SESSION['user'])) {
+                  echo "<div>{$_SESSION['user']}</div>";
+                 }
+                ?>
                 <div id = "create_game_div">
                     <button type = "button" id = "create_game_button">Create Game</button>
                 </div>
