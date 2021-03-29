@@ -41,10 +41,10 @@ class Dao {
         return $rows;
     }
 
-    public function addUser($username, $password) {
+    public function addUser($u, $p) {
         $connection = $this->getConnection();
         try {
-            $rows = $connection->query("INSERT INTO users (username, password) values ($username, $password);", PDO::FETCH_ASSOC);
+            $rows = $connection->query("INSERT INTO users (username, password) values ($u, $p);", PDO::FETCH_ASSOC);
         }
         catch (Exception $e){
             echo print_r($e,1);
