@@ -6,7 +6,7 @@
 
     $errors = array();
 
-    if(strlen(username) > 16) {
+    if(strlen($username) > 16) {
         $errors[] = "Invalid username: must be 16 or fewer characters.";
     }
     require_once 'Dao.php';
@@ -19,18 +19,18 @@
         }
     }
     if($username_exists) {
-        $errors[] = "Invalid username: username is already in use."
+        $errors[] = "Invalid username: username is already in use.";
     }
 
     if(strlen($password) < 8) {
-        $errors[] = "Invalid password: must be 8 or more characters."
+        $errors[] = "Invalid password: must be 8 or more characters.";
     }
     if(strlen($password) > 32) {
-        $errors[] = "Invalid password: must be 32 or fewer characters."
+        $errors[] = "Invalid password: must be 32 or fewer characters.";
     }
 
     if(strcmp($password, $retype_password) != 0) {
-        $errors[] = "Passwords do not match."
+        $errors[] = "Passwords do not match.";
     }
 
     if(count($errors) > 0) {
