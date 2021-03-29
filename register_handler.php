@@ -35,12 +35,14 @@
 
     if(count($errors) > 0) {
         $_SESSION['errors'] = $errors;
+        echo "Errors exist";
         header('Location: register.php');
         exit;
     }
 
     $dao->addUser($username, $password);
     $_SESSION['user'] = $username;
+    echo "No errors";
     header('Location: index.php');
     exit;
 ?>
