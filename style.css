@@ -399,7 +399,7 @@
     text-align: center;
 }
 
-.error_message {
+div.error_message {
     background-color:white;
     text-align: center;
     color: darkred;
