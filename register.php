@@ -16,7 +16,7 @@
                     <input type="text" id="create_username" name="create_username" class = "text_input" placeholder = "Create Username">
                     <input type="password" id="create_password" name="create_password" class = "text_input" placeholder = "Create Password">
                     <input type="password" id="retype_password" name="retype_password" class = "text_input" placeholder = "Re-type Password">
-                    <h6 id = "register_link">Already have an account? <a href = "login.html">Login</a></h6>
+                    <h6 id = "register_link">Already have an account? <a href = "login.php">Login</a></h6>
                     <input type="submit" value="Create Account" class = "center">
                 </form>
                 <?php
