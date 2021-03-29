@@ -10,15 +10,6 @@
     <body class = "login_color">
         <div class = "page_container">
             <div class = "content">
-                <div class = "navbar">
-                    <img src="pgs_logo.png" class = "navlogo">
-                    <a class = "navbar_text" href = "login.php">login</a>
-                    <a class = "navbar_text" href = "register.php">register</a>
-                    <a class = "navbar_text" href = "index.php">play</a>
-                    <a class = "navbar_text" href = "mygames.php">mygames</a>
-                    <a class = "navbar_text" href = "profile.php">profile</a>
-                    <a class = "navbar_text" href = "testgame.php">testgame</a>
-                </div>
                 <img src="pgs_logo.png" height = 400px width = 400px class = "center">
                 <div class = "title"><strong>P</strong>hoenix <strong>G</strong>o <strong>S</strong>erver</div>
                 <form method = "post" action = "register_handler.php">

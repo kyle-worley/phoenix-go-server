@@ -1,5 +1,9 @@
 <?php
     session_start();
+    if(!isset($_SESSION['user'])) {
+        header('Location: login.php');
+        exit;
+    }
 ?>
 <html>
     <head>
@@ -12,12 +16,11 @@
             <div class = "content">
                 <div class = "navbar">
                     <img src="pgs_logo.png" class = "navlogo">
-                    <a class = "navbar_text" href = "login.php">login</a>
-                    <a class = "navbar_text" href = "register.php">register</a>
                     <a class = "navbar_text" href = "index.php">play</a>
                     <a class = "navbar_text" href = "mygames.php">mygames</a>
                     <a class = "navbar_text" href = "profile.php">profile</a>
                     <a class = "navbar_text" href = "testgame.php">testgame</a>
+                    <a class = "navbar_text" href = "logout.php">logout</a>
                 </div>
                 <?php
                 if(isset($_SESSION['user'])) {
