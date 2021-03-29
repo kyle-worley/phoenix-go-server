@@ -8,7 +8,6 @@ class Dao {
     public function getConnection() {
         try {
             $connection = new PDO($this->dsn, $this->user, $this->password);
-            echo 'it worked';
         }
         catch (PDOException $e) {
             echo 'Connection failed: ' . $e->getMessage();

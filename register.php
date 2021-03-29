@@ -38,10 +38,6 @@
                                 }
                                 unset($_SESSION['errors']);
                             }
-                            foreach($users as $user) {
-                                echo print_r($user, 1);
-                            }
-                            echo "<pre>" . print_r($_POST,1) . "</pre>";
                         ?>
             </div>
             <footer class = "footer">

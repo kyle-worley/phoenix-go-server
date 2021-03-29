@@ -21,7 +21,7 @@
                 </div>
                 <?php
                 if(isset($_SESSION['user'])) {
-                  echo "<div>{$_SESSION['user']}</div>";
+                  echo "<div>Logged in as: {$_SESSION['user']}</div>";
                  }
                 ?>
                 <div id = "create_game_div">

@@ -398,3 +398,9 @@
     font-size: 40;
     text-align: center;
 }
+
+.error_message {
+    text-align: center;
+    color: darkred;
+    font-family: 'Sofia Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
