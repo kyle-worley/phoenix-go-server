@@ -7,7 +7,7 @@
     $errors = array();
 
     if(strlen(username) > 16) {
-        $errors[] = "Invalid username: must be 16 or fewer characters."
+        $errors[] = "Invalid username: must be 16 or fewer characters.";
     }
     require_once 'Dao.php';
     $dao = new Dao();
